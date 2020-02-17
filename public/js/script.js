@@ -13,26 +13,21 @@
     const keyPress = {
         fn(e) {
             const x = e.which;
-            if (x >= 37 && x <= 40) {
-                e.preventDefault();
-                keyPress[x] = e.type === "keydown"; 
-            }
+            e.preventDefault();
+            console.log("type: ", e.type);
+            keyPress[x] = e.type === "keydown"; 
         }
     };
     
-    const update = () => {
-        console.log("keypress37: ", keyPress[37]);
-        console.log("keypress39: ", keyPress[39]);
+    const init = () => {
         if (keyPress[37]) basket.x -= 2;
         if (keyPress[39]) basket.x += 2;
         basket.move();
+        requestAnimationFrame(init);
     }
     
     document.addEventListener('keydown', keyPress.fn);
     document.addEventListener('keyup', keyPress.fn);
     
-    (function init() {
-        update();
-        window.requestAnimationFrame(init);
-    })();
+    init();
 })();
