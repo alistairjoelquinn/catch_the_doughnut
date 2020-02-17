@@ -1,21 +1,17 @@
 (function() {
-    console.log('script.js is connected');
-
     const basket = {
-        el: document.getElementById('player'),
+        target: document.getElementById('player'),
         x: 0,
         y: 0,
         move() {
-        this.el.style.transform = `translate(${this.x}px, ${this.y}px)`;
+        this.target.style.transform = `translate(${this.x}px, ${this.y}px)`;
         }
     };
     
     const keyPress = {
-        fn(e) {
-            const x = e.which;
+        check(e) {
             e.preventDefault();
-            console.log("type: ", e.type);
-            keyPress[x] = e.type === "keydown"; 
+            keyPress[e.keyCode] = e.type === "keydown"; 
         }
     };
     
@@ -26,8 +22,8 @@
         requestAnimationFrame(init);
     }
     
-    document.addEventListener('keydown', keyPress.fn);
-    document.addEventListener('keyup', keyPress.fn);
+    document.addEventListener('keydown', keyPress.check);
+    document.addEventListener('keyup', keyPress.check);
     
     init();
 })();
