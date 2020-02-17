@@ -21,6 +21,8 @@
     };
     
     const update = () => {
+        console.log("keypress37: ", keyPress[37]);
+        console.log("keypress39: ", keyPress[39]);
         if (keyPress[37]) basket.x -= 2;
         if (keyPress[39]) basket.x += 2;
         basket.move();
