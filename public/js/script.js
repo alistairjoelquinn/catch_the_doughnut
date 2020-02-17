@@ -1,4 +1,6 @@
 (function() {
+    console.log('how much food is there? ', food.length, ' items, no need to panic!');
+
     const basket = {
         target: document.getElementById('player'),
         x: 0,
@@ -22,6 +24,10 @@
             basket.x += 2;
         }
         basket.move();
+        if(Math.random() > 0.8) {
+            let elem = document.createElement('div');
+            document.getElementById('waiting').appendChild(elem);
+        }
         requestAnimationFrame(init);
     }
     

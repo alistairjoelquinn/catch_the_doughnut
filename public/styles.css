@@ -4,3 +4,9 @@
     bottom: 0px;
     left: 400px;
 }
+
+section > div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
