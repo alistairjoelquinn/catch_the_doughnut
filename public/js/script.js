@@ -62,4 +62,12 @@
     document.addEventListener('keyup', keyPress.check);
     
     init();
+
+    let countdown = 30;
+    let timer = document.getElementById('timer');
+    timer.innerText = countdown;
+    setInterval(() => {
+        countdown--;
+        timer.innerText = countdown;
+    }, 1000);
 })();
