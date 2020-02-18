@@ -1,6 +1,13 @@
 (function() {
     let score = 0;
     let scoreBox = document.getElementById('score');
+    let countdown = 30;
+    let timer = document.getElementById('timer');
+    timer.innerText = countdown;
+    setInterval(() => {
+        countdown--;
+        timer.innerText = countdown;
+    }, 1000);
 
     const trolley = {
         target: document.getElementById('player'),
@@ -49,8 +56,27 @@
         if (keyPress[37]) trolley.x -= 4;
         if (keyPress[39]) trolley.x += 4;
     }
+
+    const timeCheck = () => {
+        if(score >= 10) {
+            $('#waiting').addClass('hidden');
+            $('.text').addClass('hidden');
+            $('#winner').removeClass('hidden');
+        }
+        if(countdown <= 0 && score < 10) {
+            $('#waiting').addClass('hidden');
+            $('.text').addClass('hidden');
+            $('#loser').removeClass('hidden');
+        }
+        if(countdown <= 0 && score >= 10) {
+            $('#waiting').addClass('hidden');
+            $('.text').addClass('hidden');
+            $('#winner').removeClass('hidden');
+        }
+    }
     
     const init = () => {
+        timeCheck();
         foodMove();
         basketCheck();
         trolley.move();
@@ -62,12 +88,4 @@
     document.addEventListener('keyup', keyPress.check);
     
     init();
-
-    let countdown = 30;
-    let timer = document.getElementById('timer');
-    timer.innerText = countdown;
-    setInterval(() => {
-        countdown--;
-        timer.innerText = countdown;
-    }, 1000);
 })();

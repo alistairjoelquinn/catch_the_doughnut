@@ -12,7 +12,9 @@ body {
     transform: translateY(-10vh);
 }
 
-
+.timer {
+    font-size: 150px;
+}
 
 #player {
     font-size: 100px;
@@ -31,4 +33,18 @@ section > div {
 
 .score-line {
     display: inline-block;
+}
+
+.ending {
+    position: absolute;
+    top: 20vh;
+    width: 100vw;
+    text-align: center;
+    font-size: 200px;
+    color: red;
+    -webkit-text-stroke: 4px black;
+}
+
+.hidden {
+    visibility: hidden;
 }
