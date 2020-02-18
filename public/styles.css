@@ -36,6 +36,8 @@ section > div {
 }
 
 .ending {
+    display: flex;
+    flex-direction: column;
     position: absolute;
     top: 20vh;
     width: 100vw;
@@ -43,6 +45,19 @@ section > div {
     font-size: 200px;
     color: red;
     -webkit-text-stroke: 4px black;
+}
+
+.play-again {
+    width: 200px;
+    height: 40px;
+    background-color:rgb(255, 250, 95);
+    color: tomato;
+    border-radius: 20px;
+    border: 1px solid black;
+    font-size: 30px;
+    -webkit-text-stroke: 2px black;
+    align-self: center;
+    margin-top: 40px;
 }
 
 .hidden {
