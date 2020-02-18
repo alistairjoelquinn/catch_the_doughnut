@@ -2,7 +2,6 @@
     font-size: 100px;
     height: 100px;
     width: 100px;
-    border: 1px solid black;
     position: absolute;
     bottom: 0px;
 }
@@ -12,4 +11,8 @@ section > div {
     height: 60px;
     font-size: 60px;
     position: absolute;
+}
+
+.score-line {
+    display: inline-block;
 }

@@ -22,8 +22,9 @@
         let foods = $('section>div');
         for(let x = 0; x < foods.length; x++) {
             newHeight = parseInt(((foods.eq(x).css('top')).split('px')[0]), 10) + 2;
-            if((newHeight > (window.innerHeight - 100))) {
-                console.log('item reached the basket height');
+            itemLeft = foods.eq(x).offset().left;
+            if(((newHeight > (window.innerHeight - 100))) && itemLeft > basket.x && itemLeft < (basket.x + 80) && foods.eq(x).text() == '🍩') {
+                score++;
                 foods.eq(x).remove();
             }
             foods.eq(x).css({
