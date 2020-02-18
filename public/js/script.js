@@ -21,9 +21,7 @@
         scoreBox.innerText = score;
         let foods = $('section>div');
         for(let x = 0; x < foods.length; x++) {
-            let height = (foods.eq(x).css('top')).split('px')[0];
-            let newHeight = parseInt(height, 10);
-            newHeight = newHeight + 2;
+            newHeight = parseInt(((foods.eq(x).css('top')).split('px')[0]), 10) + 2;
             foods.eq(x).css({
                 top: `${newHeight}px`
             });
@@ -31,19 +29,15 @@
                 foods.eq(x).remove();
             };
         }
-        if (keyPress[37]) {
-            basket.x -= 4;
-        }
-        if (keyPress[39]) {
-            basket.x += 4;
-        }
+        if (keyPress[37]) basket.x -= 4;
+        if (keyPress[39]) basket.x += 4;
         basket.move();
         if(Math.random() > 0.96) {
             let elem = document.createElement('div');
             let text = food[Math.floor(Math.random() * 24)];
             elem.innerText = text;
             elem.style.top = '-60px';
-            elem.style.transform = `translateX(${Math.random()*1000}px)`;
+            elem.style.transform = `translateX(${Math.random()*1200}px)`;
             document.getElementById('waiting').appendChild(elem);
         }
         requestAnimationFrame(init);
