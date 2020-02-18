@@ -22,6 +22,7 @@ body {
     width: 100px;
     position: absolute;
     bottom: 0px;
+    z-index: 1;
 }
 
 section > div {
@@ -29,6 +30,13 @@ section > div {
     height: 60px;
     font-size: 60px;
     position: absolute;
+}
+
+#player > div {
+    position: absolute;
+    bottom: 30px;
+    font-size: 30px;
+    z-index: 0;
 }
 
 .score-line {

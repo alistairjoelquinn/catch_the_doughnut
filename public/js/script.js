@@ -34,6 +34,10 @@
                 score++;
                 foods.eq(x).remove();
                 scoreBox.innerText = score;
+                let donut = document.createElement('div');
+                donut.innerText = '🍩';
+                donut.style.left = `${score*5}px`
+                $('#player').append(donut);
             }
             foods.eq(x).css({top: `${newHeight}px`});
             if(newHeight > window.innerHeight) {
