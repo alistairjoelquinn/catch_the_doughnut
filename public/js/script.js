@@ -1,6 +1,4 @@
 (function() {
-    console.log('how much food is there? ', food.length, ' items, no need to panic!');
-
     const basket = {
         target: document.getElementById('player'),
         x: 0,
@@ -17,6 +15,10 @@
     };
     
     const init = () => {
+        let foods = $('section>div');
+        for(let x = 0; x < foods.length; x++) {
+            console.log(foods.eq(x).offset());
+        }
         if (keyPress[37]) {
             basket.x -= 2;
         }
@@ -24,8 +26,11 @@
             basket.x += 2;
         }
         basket.move();
-        if(Math.random() > 0.8) {
+        if(Math.random() > 0.96) {
             let elem = document.createElement('div');
+            let text = food[Math.floor(Math.random() * 24)];
+            elem.innerText = text;
+            elem.style.transform = `translate(${Math.random()*1000}px)`;
             document.getElementById('waiting').appendChild(elem);
         }
         requestAnimationFrame(init);
