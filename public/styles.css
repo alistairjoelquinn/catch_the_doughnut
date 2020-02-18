@@ -1,3 +1,17 @@
+body {
+    font-family: 'Lacquer', sans-serif;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    transform: translateY(-10vh);
+}
+
 #player {
     font-size: 100px;
     height: 100px;

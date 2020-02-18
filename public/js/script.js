@@ -2,7 +2,7 @@
     let score = 0;
     let scoreBox = document.getElementById('score');
 
-    const basket = {
+    const trolley = {
         target: document.getElementById('player'),
         x: 0,
         move() {
@@ -22,7 +22,7 @@
         for(let x = 0; x < foods.length; x++) {
             newHeight = parseInt(((foods.eq(x).css('top')).split('px')[0]), 10) + 4;
             itemLeft = foods.eq(x).offset().left;
-            if(((newHeight > (window.innerHeight - 100))) && itemLeft > basket.x && itemLeft < (basket.x + 80) && foods.eq(x).text() == '🍩') {
+            if(((newHeight > (window.innerHeight - 100))) && itemLeft > trolley.x && itemLeft < (trolley.x + 80) && foods.eq(x).text() == '🍩') {
                 score++;
                 foods.eq(x).remove();
                 scoreBox.innerText = score;
@@ -37,7 +37,7 @@
     const makeFood = () => {
         if(Math.random() > 0.96) {
             let elem = document.createElement('div');
-            let text = food[Math.floor(Math.random() * 24)];
+            let text = food[Math.floor(Math.random() * food.length)];
             elem.innerText = text;
             elem.style.top = '-60px';
             elem.style.transform = `translateX(${Math.random() * window.innerWidth}px)`;
@@ -46,14 +46,14 @@
     }
 
     const basketCheck = () => {
-        if (keyPress[37]) basket.x -= 4;
-        if (keyPress[39]) basket.x += 4;
+        if (keyPress[37]) trolley.x -= 4;
+        if (keyPress[39]) trolley.x += 4;
     }
     
     const init = () => {
         foodMove();
         basketCheck();
-        basket.move();
+        trolley.move();
         makeFood();
         requestAnimationFrame(init);
     }
