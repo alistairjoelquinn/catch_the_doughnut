@@ -22,6 +22,10 @@
         let foods = $('section>div');
         for(let x = 0; x < foods.length; x++) {
             newHeight = parseInt(((foods.eq(x).css('top')).split('px')[0]), 10) + 2;
+            if((newHeight > (window.innerHeight - 100))) {
+                console.log('item reached the basket height');
+                foods.eq(x).remove();
+            }
             foods.eq(x).css({
                 top: `${newHeight}px`
             });
