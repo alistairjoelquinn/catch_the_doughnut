@@ -3,6 +3,7 @@
     let scoreBox = document.getElementById('score');
     let countdown = 30;
     let timer = document.getElementById('timer');
+    let button = document.querySelector('.play-again');
     timer.innerText = countdown;
     setInterval(() => {
         countdown--;
@@ -86,6 +87,9 @@
     
     document.addEventListener('keydown', keyPress.check);
     document.addEventListener('keyup', keyPress.check);
+    button.addEventListener('click', () => {
+        location.reload();
+    });
     
-    init();
+    init(); 
 })();
