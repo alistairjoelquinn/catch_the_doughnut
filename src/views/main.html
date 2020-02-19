@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lacquer&display=swap" rel="stylesheet">
+    <title>🍩</title>
+</head>
+<body>
+    <section id="waiting"></section>
+    <div id="loser" class="hidden ending">
+        YOU LOSE!
+        <div class="play-again">Play Again?</div>
+    </div>
+    <div id="winner" class="hidden ending">
+        WINNER!
+        <div class="play-again">Play Again?</div>
+    </div>
+    <section class="text">
+        <section>
+            <section class="score-line timer">Time:    </section><section class="score-line timer" id="timer">30</section>
+        </section>
+        <h1>CAN YOU CATCH 10 DOUGHNUTS IN 30 SECONDS? </h1>
+        <section class="score-box">
+            <section class="score-line">Score: </section><section class="score-line" id="score"></section>
+        </section>
+    </section>
+    <div id="player">🛒</div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="../app/data.js"></script>
+    <script src="../app/index.js"></script>
+</body>
+</html>

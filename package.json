@@ -4,12 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nw src/",
+    "prod": "nw build --platforms win32,win64,osx64,linux32,linux64 --buildDir dist/ src/"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nw": "^0.44.1-sdk",
+    "nw-builder": "^3.5.7"
   }
 }

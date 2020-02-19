@@ -1,0 +1,73 @@
+body {
+    font-family: 'Lacquer', sans-serif;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    transform: translateY(-10vh);
+}
+
+.timer {
+    font-size: 150px;
+}
+
+#player {
+    font-size: 100px;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
+}
+
+section > div {
+    width: 60px;
+    height: 60px;
+    font-size: 60px;
+    position: absolute;
+}
+
+#player > div {
+    position: absolute;
+    bottom: 30px;
+    font-size: 30px;
+    z-index: -1;
+}
+
+.score-line {
+    display: inline-block;
+}
+
+.ending {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 20vh;
+    width: 100vw;
+    text-align: center;
+    font-size: 200px;
+    color: red;
+    -webkit-text-stroke: 4px black;
+}
+
+.play-again {
+    width: 200px;
+    height: 40px;
+    background-color:rgb(255, 250, 95);
+    color: tomato;
+    border-radius: 20px;
+    border: 1px solid black;
+    font-size: 30px;
+    -webkit-text-stroke: 2px black;
+    align-self: center;
+    margin-top: 40px;
+}
+
+.hidden {
+    visibility: hidden;
+}
