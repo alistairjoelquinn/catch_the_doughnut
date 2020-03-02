@@ -4,6 +4,9 @@
     let countdown = 30;
     let timer = document.getElementById('timer');
     let button = document.querySelector('.play-again');
+    const food = [ 
+        '🍩', '🍪', '🌰', '🍦', '🍣', '🍤', '🍱', '🍩', '🍩', '🍩', '🍩', '🍩', '🍩', '🍔', '🌭', '🥪', '🍜', '🍖', '🍳', '🍩', '🧀', '🥨', '🥯', '🥐', '🥕', '🥦', '🌶', '🍩', '🌽', '🍅', '🍆', '🥑'
+    ];
     timer.innerText = countdown;
     setInterval(() => {
         countdown--;

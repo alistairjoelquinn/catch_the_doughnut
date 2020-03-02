@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nw src/",
-    "prod": "nw build --platforms win32,win64,osx64,linux32,linux64 --buildDir dist/ src/"
+    "prod": "nw build --platforms win32, win64, osx64, linux32, linux64 --buildDir dist/ src/"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +14,7 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
-    "nw": "^0.44.1-sdk",
+    "nw": "^0.44.3",
     "nw-builder": "^3.5.7"
   }
 }

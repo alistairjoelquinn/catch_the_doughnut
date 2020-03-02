@@ -9,15 +9,14 @@
   "window": {
       "title": "Catch The Doughnut",
       "icon": "🍩",
-      "toolbar": true,
+      "toolbar": false,
       "width": 1000,
       "height": 600,
       "min_width": 1000,
       "min_height": 600,
       "max_width": 1000,
       "max_height": 600,
-      "position": "mouse"
-      
+      "position": "center"
   },
   "keywords": [],
   "author": "",
